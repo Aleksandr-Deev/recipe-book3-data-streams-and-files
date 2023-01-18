@@ -1,8 +1,7 @@
 package com.example.recipebook3datastreamsandfiles.controller;
 
-
 import com.example.recipebook3datastreamsandfiles.model.Recipe;
-import com.example.recipebook3datastreamsandfiles.service.impl.RecipeServiceImpl;
+import com.example.recipebook3datastreamsandfiles.service.RecipeService;
 import io.swagger.v3.oas.annotations.Operation;
 import org.springframework.web.bind.annotation.*;
 
@@ -12,11 +11,12 @@ import java.util.Collection;
 @RequestMapping("/recipe")
 public class RecipeController {
 
-    private final RecipeServiceImpl recipeService;
+    private final RecipeService recipeService;
 
-    public RecipeController(RecipeServiceImpl recipeService) {
+    public RecipeController(RecipeService recipeService) {
         this.recipeService = recipeService;
     }
+
 
     @GetMapping
     @Operation(

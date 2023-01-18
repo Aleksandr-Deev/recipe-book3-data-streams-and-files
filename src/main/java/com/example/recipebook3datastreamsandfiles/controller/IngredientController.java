@@ -1,7 +1,7 @@
 package com.example.recipebook3datastreamsandfiles.controller;
 
 import com.example.recipebook3datastreamsandfiles.model.Ingredient;
-import com.example.recipebook3datastreamsandfiles.service.impl.IngredientsServiceImpl;
+import com.example.recipebook3datastreamsandfiles.service.IngredientsService;
 import io.swagger.v3.oas.annotations.Operation;
 import org.springframework.web.bind.annotation.*;
 
@@ -9,10 +9,9 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/ingredient")
 public class IngredientController {
 
-    private final IngredientsServiceImpl ingredientsService;
+    private final IngredientsService ingredientsService;
 
-
-    public IngredientController(IngredientsServiceImpl ingredientsService) {
+    public IngredientController(IngredientsService ingredientsService) {
         this.ingredientsService = ingredientsService;
     }
 
